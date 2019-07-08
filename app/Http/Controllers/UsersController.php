@@ -30,7 +30,7 @@ class UsersController extends Controller
 		$data = $request->all();
 
 		if ($request->avatar) {
-			$path = $reload->save($request->avatar,'avatars',$user->id);
+			$path = $reload->save($request->avatar,'avatars',$user->id, 416);
 			if ($path) {
 				$data['avatar'] = $path['path'];
 			}
